@@ -1,0 +1,37 @@
+33) (0,0) Sistema de Assinaturas
+
+O sistema deve permitir o cadastro de planos de assinatura,
+como mensal ou anual, 
+cada um com seu valor e duração.
+A entidade de assinaturas deve registrar 
+    o nome do cliente, 
+    a data de início e 
+    o plano escolhido.
+A regra de negócio envolve calcular automaticamente a data de validade da assinatura
+
+
+Estrutura:
+
+Plano
+    id
+    nome
+    valor
+    duraçãoMeses
+
+Assinatura
+    id
+    cliente
+    dataInicio
+    planoId
+    dataValidade (calculada)
+
+Endpoints:
+    GET /planos
+    POST /planos
+    PUT /plano
+    DELETE /plano
+    GET /assinaturas
+    POST /assinaturas
+    GET /assinaturas/{id}/status
+    PUT /assinaturas
+    DELETE /assinaturas
