@@ -1,10 +1,12 @@
 import Express from "express";
+import cors from "cors";
 import Plano from "./controllers/Plano.js"
 import Assinatura from "./controllers/Assinatura.js";
 
 //confs da api
 const api = Express();
 api.use(Express.json());
+api.use(cors());
 
 //Rotas Plano
 api.get("/Planos", Plano.readAllPlano)
